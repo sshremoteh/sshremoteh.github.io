@@ -1,0 +1,6 @@
+{
+  "name": "PC Remote Control",
+  "description": "An elegant, AI-powered web dashboard to remotely control and monitor your PC via a simple WebSocket-connected client script.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
