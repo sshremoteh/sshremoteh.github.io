@@ -1,0 +1,315 @@
+import { Project, SkillCategory, GithubProfile } from '../types';
+
+export const githubProfile: GithubProfile = {
+  username: 'sshremoteh',
+  name: 'Sinorias',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/304503793?v=4',
+  htmlUrl: 'https://github.com/sshremoteh',
+  publicRepos: 10,
+  followers: 1,
+  following: 1,
+  bio: 'Systems & Low-level Software Engineer • Rust, Android Internals, Vulkan Graphics & AI Agents',
+};
+
+export const projects: Project[] = [
+  {
+    id: 'horizon-android',
+    name: 'HorizonAndroid',
+    repoName: 'HorizonAndroid',
+    title: 'Horizon Android (Minecraft JE 26.3 Rust Client)',
+    shortDesc: 'Полная нативная перепись движка Minecraft Java Edition 26.3 на чистом Rust для ARM64 Android.',
+    description:
+      'Нативный порт открытого движка Horizon (Minecraft Java 26.3) под мобильную архитектуру Android aarch64. Работает напрямую с Vulkan 1.1+ и wgpu без прослоек JVM и оверхеда традиционного Java Runtime.',
+    primaryLanguage: 'Rust',
+    category: 'systems',
+    stars: 3,
+    featured: true,
+    githubUrl: 'https://github.com/sshremoteh/HorizonAndroid',
+    tags: ['Rust 100%', 'Vulkan 1.1+', 'ARM64 (aarch64)', 'wgpu', 'Game Engine', 'Android NDK'],
+    highlights: [
+      '100% нативный Rust код без JVM и эмуляции',
+      'Прямой рендеринг через графический API Vulkan 1.1+',
+      'Оптимизировано под многоядерные чипсеты ARM64-v8a',
+      'Полная совместимость с протоколом Minecraft JE 26.3',
+    ],
+    stats: [
+      { label: 'Language', value: '100% Rust' },
+      { label: 'Target', value: 'ARM64-v8a' },
+      { label: 'Renderer', value: 'Vulkan 1.1+' },
+      { label: 'Stars', value: '3' },
+    ],
+  },
+  {
+    id: 'rac',
+    name: 'RAC',
+    repoName: 'RAC',
+    title: 'RAC — Rust Android Compiler & Toolchain',
+    shortDesc: 'Ультрабыстрый автономный компилятор и сборщик APK на Rust без JVM и Android SDK.',
+    description:
+      'Революционный инструмент, полностью заменяющий aapt2, zipalign, apksigner и Gradle для сборки нативных Android-приложений. Компилирует ресурсы, выравнивает zip-архив и подписывает APK v2/v3 схемы всего за десятки миллисекунд в едином бинарнике размером 2.1 МБ.',
+    primaryLanguage: 'Rust',
+    category: 'systems',
+    stars: 1,
+    featured: true,
+    githubUrl: 'https://github.com/sshremoteh/RAC',
+    tags: ['Rust', 'Compiler', 'Zero JVM', 'Binary Formats', 'APK Signer', 'AAPT2 Replacement'],
+    highlights: [
+      'В 23.5 раза быстрее связки Gradle + aapt2 + apksigner',
+      'Единый автономный исполняемый файл размером 2.1 MB',
+      'Полное отсутствие зависимостей от Java Runtime и Android SDK',
+      'Встроенная поддержка схем подписи APK Signature Scheme v2 и v3',
+    ],
+    stats: [
+      { label: 'Speedup', value: '23.5x' },
+      { label: 'Binary Size', value: '2.1 MB' },
+      { label: 'JVM Deps', value: '0' },
+      { label: 'Signing', value: 'v2 & v3' },
+    ],
+  },
+  {
+    id: 'nebula-launcher',
+    name: 'Nebula-Launcher',
+    repoName: 'Nebula-Launcher',
+    title: 'Nebula Launcher for Android',
+    shortDesc: 'Клиент-лаунчер Minecraft: Java Edition 26.3 для Android с кастомным интерфейсом.',
+    description:
+      'Специализированный мобильный лаунчер и среда запуска для ARM64 Android устройств на базе движка Horizon. Поддерживает Android 9.0–15+, встроенное управление тач-контроллерами и прямое подключение к Java-серверам.',
+    primaryLanguage: 'Rust',
+    category: 'android',
+    stars: 1,
+    featured: true,
+    githubUrl: 'https://github.com/sshremoteh/Nebula-Launcher',
+    liveUrl: 'https://sshremoteh.github.io/Nebula-Launcher/',
+    tags: ['Rust', 'Android 9-15+', 'Touch UI', 'Networking', 'wgpu', 'GitHub Pages'],
+    highlights: [
+      'Поддержка современных версий Android (от 9.0 до 15+)',
+      'Интуитивный сенсорный оверлей с настройкой виртуальных кнопок',
+      'Интегрированный менеджер аккаунтов и версий клиента',
+      'Официальный сайт документации развернут на GitHub Pages',
+    ],
+    stats: [
+      { label: 'OS Support', value: 'Android 9-15+' },
+      { label: 'Architecture', value: 'ARM64' },
+      { label: 'Engine', value: 'Rust / wgpu' },
+    ],
+  },
+  {
+    id: 'horizon-browser',
+    name: 'horizonbrowser',
+    repoName: 'horizonbrowser',
+    title: 'Horizon Browser (Minecraft JE on WebGPU)',
+    shortDesc: 'Портирование Rust-движка Minecraft Java Edition в браузер через WebAssembly и WebGPU.',
+    description:
+      'Экспериментальный порт движка Horizon в веб-окружение. Позволяет запускать воксельный мир с нативной производительностью прямо во вкладке браузера благодаря WebAssembly и стандарту WebGPU.',
+    primaryLanguage: 'Rust',
+    category: 'systems',
+    stars: 0,
+    featured: false,
+    githubUrl: 'https://github.com/sshremoteh/horizonbrowser',
+    tags: ['Rust', 'WebAssembly', 'WebGPU', 'Wasm-Bindgen', 'Web Engine'],
+    highlights: [
+      'Компиляция системного Rust в Wasm через llvm/wasm32',
+      'Использование современного браузерного API WebGPU',
+      'Потоковая подгрузка чанков и ресурсов',
+    ],
+    stats: [
+      { label: 'Target', value: 'WASM' },
+      { label: 'API', value: 'WebGPU' },
+      { label: 'Language', value: 'Rust' },
+    ],
+  },
+  {
+    id: 'telegram-agent-api',
+    name: 'telegram-agent-api',
+    repoName: 'telegram-agent-api',
+    title: 'Local Telegram Agent API & MCP Bridge',
+    shortDesc: 'Защищенный локальный REST API и MCP шлюз для управления Telegram через ИИ-агентов.',
+    description:
+      'Высокопроизводительный локальный сервис для безопасной интеграции пользовательского аккаунта Telegram с ИИ-ассистентами (Google Antigravity, Claude, автономные агенты). Реализован на FastAPI, Telethon (MTProto) и стандарте Model Context Protocol (stdio MCP).',
+    primaryLanguage: 'Python',
+    category: 'ai',
+    stars: 0,
+    featured: true,
+    githubUrl: 'https://github.com/sshremoteh/telegram-agent-api',
+    tags: ['Python', 'FastAPI', 'Telethon MTProto', 'Model Context Protocol', 'AI Agents', 'Security'],
+    highlights: [
+      'Поддержка протокола MCP (Model Context Protocol stdio)',
+      'Строгая изоляция: только локальный интерфейс 127.0.0.1 с Bearer токеном',
+      'Прямое MTProto взаимодействие через Telegram API без сторонних бот-серверов',
+      'Управление диалогами, поиск сообщений, интерактивные кнопки',
+    ],
+    stats: [
+      { label: 'Protocol', value: 'MCP & REST' },
+      { label: 'Security', value: 'Loopback 127.0.0.1' },
+      { label: 'MTProto', value: 'Telethon' },
+    ],
+  },
+  {
+    id: 'localsend-cli',
+    name: 'localsend-cli',
+    repoName: 'localsend-cli',
+    title: 'LocalSend CLI Enhanced & Packages',
+    shortDesc: 'Расширенная версия CLI LocalSend со встроенным интерактивным TUI-меню настроек.',
+    description:
+      'Форк и развитие CLI-клиента кросс-платформенного протокола LocalSend. Добавлено интерактивное терминальное меню настроек прямо во время работы (клавиша S), а также сборочные пакеты для Windows (.exe Inno Setup) и Linux (.deb для amd64, arm64, aarch64 с systemd-сервисом).',
+    primaryLanguage: 'Rust',
+    category: 'tools',
+    stars: 1,
+    featured: false,
+    githubUrl: 'https://github.com/sshremoteh/localsend-cli',
+    tags: ['Rust', 'LocalSend P2P', 'Terminal UI (TUI)', 'Debian packaging', 'Inno Setup', 'systemd'],
+    highlights: [
+      'Интерактивное TUI-окно настроек на лету прямо внутри сессии',
+      'Deb-пакеты с защитой от конфликтов портов и systemd демоном',
+      'Инсталлятор Windows с интеграцией в контекстное меню Explorer',
+    ],
+    stats: [
+      { label: 'Language', value: 'Rust' },
+      { label: 'Packaging', value: 'deb / exe' },
+      { label: 'Stars', value: '1' },
+    ],
+  },
+  {
+    id: 'gamebot',
+    name: 'gamebot',
+    repoName: 'gamebot',
+    title: 'Telegram Dice GameBot',
+    shortDesc: 'Игровой Telegram-бот на базе официальных анимированных эмодзи (Dice API).',
+    description:
+      'Асинхронный Telegram-бот с 6 интерактивными дисциплинами: Баскетбол, Футбол, Боулинг, Дартс, Слоты и Кости. Каждый бросок анимируется в чате в реальном времени серверами Telegram с расчетной моделью вероятностей и коэффициентов.',
+    primaryLanguage: 'Python',
+    category: 'ai',
+    stars: 0,
+    featured: false,
+    githubUrl: 'https://github.com/sshremoteh/gamebot',
+    tags: ['Python', 'aiogram / Telethon', 'Dice API', 'Game Physics', 'AsyncIO'],
+    highlights: [
+      '6 игровых режимов с серверной верификацией исходов броска',
+      'Динамические коэффициенты выплат (от x1.4 до x3.5 за страйк/попадания)',
+      'Система баланса и ставок с транзакционной целостностью',
+    ],
+  },
+  {
+    id: 'liftd',
+    name: 'liftd',
+    repoName: 'liftd',
+    title: 'Liftw Video Downloader & Lampa Plugin',
+    shortDesc: 'Утилита для загрузки потокового видео и кастомный плагин для медиаплеера Lampa.',
+    description:
+      'Инструмент для автоматизации работы с медиаконтентом платформы Liftw: CLI-загрузчик видео в формате MP4 с автоопределением FFmpeg и JS-плагин для популярного ТВ-медиаплеера Lampa.',
+    primaryLanguage: 'Python',
+    category: 'tools',
+    stars: 0,
+    featured: false,
+    githubUrl: 'https://github.com/sshremoteh/liftd',
+    tags: ['Python', 'FFmpeg', 'JavaScript', 'Lampa Media Player', 'HLS Streaming'],
+    highlights: [
+      'Парсинг защищенных HLS/DASH стримов с конвертацией в MP4',
+      'Модульный плагин для Lampa TV с инъекцией каталогов',
+      'Интерактивный и пакетный режим выполнения',
+    ],
+  },
+  {
+    id: 'riff',
+    name: 'riff',
+    repoName: 'riff',
+    title: 'Riff Desktop Music Player',
+    shortDesc: 'Кросс-платформенный музыкальный плеер для локальных файлов, YouTube Music и SoundCloud.',
+    description:
+      'Современный десктопный аудиоплеер с поддержкой стриминговых сервисов, эквалайзера, кастомных скинов и бесшовного воспроизведения.',
+    primaryLanguage: 'JavaScript',
+    category: 'tools',
+    stars: 0,
+    featured: false,
+    githubUrl: 'https://github.com/sshremoteh/riff',
+    liveUrl: 'https://t.me/riffplayer',
+    tags: ['JavaScript', 'Electron', 'Audio Processing', 'Cross-Platform', 'UI/UX'],
+    highlights: [
+      'Единый интерфейс для стриминга (SoundCloud, YT Music) и локальной медиатеки',
+      'Кросс-платформенная сборка под Windows, macOS, Linux, iOS и Android',
+    ],
+  },
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: 'Системное программирование и Языки',
+    skills: [
+      {
+        name: 'Rust',
+        level: 'Advanced',
+        description: 'Systems-level, zero-cost abstractions, unsafe, FFI, SIMD, WebAssembly, wgpu.',
+      },
+      {
+        name: 'Python',
+        level: 'Advanced',
+        description: 'FastAPI, Telethon MTProto, AsyncIO, медиа-конвертеры, backend tooling.',
+      },
+      {
+        name: 'C / C++',
+        level: 'Intermediate',
+        description: 'Android NDK, JNI binding, низкоуровневая интеграция библиотек.',
+      },
+      {
+        name: 'TypeScript / JS',
+        level: 'Proficient',
+        description: 'React, Vite, Tailwind CSS, frontend и плагины для медиаплееров.',
+      },
+      {
+        name: 'Shell / Bash',
+        level: 'Proficient',
+        description: 'CI/CD, автоматизация сборки пакетов .deb, скрипты развертывания.',
+      },
+    ],
+  },
+  {
+    title: 'Низкоуровневые системы и Компиляторы',
+    skills: [
+      {
+        name: 'Android Internals & NDK',
+        level: 'Expert',
+        description: 'Сборка APK без JVM, структуры aapt2, zip align, APK signing v2/v3 схемы.',
+      },
+      {
+        name: 'Vulkan & wgpu',
+        level: 'Advanced',
+        description: 'Низкоуровневый рендеринг, шейдеры, Vulkan 1.1+ под мобильные GPU Adreno/Mali.',
+      },
+      {
+        name: 'ARM64 Architecture',
+        level: 'Advanced',
+        description: 'Оптимизация под мобильные процессоры aarch64, NEON инструкции.',
+      },
+      {
+        name: 'Reverse Engineering',
+        level: 'Advanced',
+        description: 'Реверс бинарных форматов, структур пакетов, игровых сетевых протоколов.',
+      },
+    ],
+  },
+  {
+    title: 'Сетевые протоколы и AI Интеграция',
+    skills: [
+      {
+        name: 'Telegram MTProto',
+        level: 'Expert',
+        description: 'Прямая работа с протоколом Telegram через Telethon, авторизация, сессии.',
+      },
+      {
+        name: 'Model Context Protocol (MCP)',
+        level: 'Advanced',
+        description: 'Интеграция ИИ-агентов (Google Antigravity, Claude) со сторонними сервисами через stdio/REST.',
+      },
+      {
+        name: 'FastAPI & REST',
+        level: 'Advanced',
+        description: 'Сверхбыстрые локальные сервисы с Bearer-аутентификацией и документацией OpenAPI.',
+      },
+      {
+        name: 'P2P & Local Networking',
+        level: 'Proficient',
+        description: 'Протокол LocalSend, обнаружение в локальной сети, сокеты, безопасность.',
+      },
+    ],
+  },
+];
