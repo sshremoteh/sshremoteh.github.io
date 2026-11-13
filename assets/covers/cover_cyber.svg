@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="grad_cover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04151f" />
+      <stop offset="100%" stop-color="#0c2836" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="12" fill="url(#grad_cover)"/>
+  <g><rect x="80" y="160" width="40" height="160" fill="#00f0ff" opacity="0.5"/><rect x="140" y="110" width="50" height="210" fill="#7928ca" opacity="0.6"/><rect x="210" y="140" width="45" height="180" fill="#ff007a" opacity="0.5"/><rect x="275" y="180" width="50" height="140" fill="#00f0ff" opacity="0.7"/></g>
+  <rect x="0" y="310" width="400" height="90" fill="#000000" opacity="0.6"/>
+  <text x="24" y="348" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Cyber City Walk</text>
+  <text x="24" y="378" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-size="16" fill="#aaaaaa">Neo Tokyo</text>
+</svg>

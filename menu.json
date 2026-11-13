@@ -1,0 +1,10 @@
+{
+  "headline": "NOVA MUSIC TV",
+  "menu": [
+    {
+      "icon": "music-note",
+      "label": "Open NOVA MUSIC",
+      "action": "link:{PREFIX}{SERVER}/index.html"
+    }
+  ]
+}

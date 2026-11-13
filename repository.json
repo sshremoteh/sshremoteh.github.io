@@ -1,0 +1,7 @@
+{
+  "name": "NOVA Official Showcase",
+  "id": "nova-official",
+  "version": 1,
+  "description": "Default curated music repository featuring synthwave, lofi, ambient and piano selections.",
+  "tracks": "tracks.json"
+}

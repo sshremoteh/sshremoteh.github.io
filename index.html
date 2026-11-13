@@ -1,19 +1,141 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/304503793?v=4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sinorias (@sshremoteh) — Portfolio | Rust & Systems Engineer</title>
-    <meta name="description" content="Portfolio of Sinorias (@sshremoteh) — Systems & Low-level Software Engineer specializing in Rust, Android internals, Vulkan/wgpu graphics, and AI agent architectures." />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NOVA MUSIC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" data-zone="nav">
+      <div class="brand-header">
+        <div class="brand-logo">&#9658;</div>
+        <div class="brand-title">NOVA<span class="brand-badge">TV</span></div>
+      </div>
+      <ul class="nav-menu">
+        <li>
+          <button class="nav-item focusable active" data-zone="nav" data-target-view="home">
+            <span class="nav-item-icon">&#8962;</span>Home
+          </button>
+        </li>
+        <li>
+          <button class="nav-item focusable" data-zone="nav" data-target-view="search">
+            <span class="nav-item-icon">&#128269;</span>Search
+          </button>
+        </li>
+        <li>
+          <button class="nav-item focusable" data-zone="nav" data-target-view="library">
+            <span class="nav-item-icon">&#128451;</span>Library
+          </button>
+        </li>
+        <li>
+          <button class="nav-item focusable" data-zone="nav" data-target-view="playlists">
+            <span class="nav-item-icon">&#127926;</span>Playlists
+          </button>
+        </li>
+        <li>
+          <button class="nav-item focusable" data-zone="nav" data-target-view="repositories">
+            <span class="nav-item-icon">&#9776;</span>Repositories
+          </button>
+        </li>
+      </ul>
+    </div>
 
-    <!-- Google Font "Kanit" (weights 300-900) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-[#0C0C0C] text-[#E0E6ED] font-kanit antialiased selection:bg-[#B600A8]/30 selection:text-white overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Main Content Area -->
+    <div id="content-area" data-zone="content">
+      <!-- Dynamic views rendered by js/ui.js -->
+    </div>
+
+    <!-- Docked Mini Player -->
+    <div id="mini-player" data-zone="player">
+      <div class="mini-player-track">
+        <div class="mini-player-fill" id="mini-progress-fill"></div>
+      </div>
+      <div class="mini-player-body">
+        <div class="mini-col-info">
+          <img class="mini-thumb" id="mini-cover" src="assets/covers/default_cover.svg" alt="" />
+          <div class="mini-meta">
+            <div class="mini-title" id="mini-title">No track playing</div>
+            <div class="mini-artist" id="mini-artist">Select a track</div>
+          </div>
+        </div>
+        <div class="mini-col-controls">
+          <button class="mini-ctrl-btn focusable" data-zone="player" id="mini-prev-btn" title="Previous">&#9198;</button>
+          <button class="mini-ctrl-btn play-btn focusable" data-zone="player" id="mini-play-btn" title="Play/Pause">&#9658;</button>
+          <button class="mini-ctrl-btn focusable" data-zone="player" id="mini-next-btn" title="Next">&#9197;</button>
+        </div>
+        <div class="mini-col-actions">
+          <button class="btn btn-secondary focusable" data-zone="player" id="mini-expand-btn">Now Playing &#8599;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fullscreen Now Playing Overlay -->
+    <div id="now-playing-view" data-zone="now-playing">
+      <div class="np-top-bar">
+        <button class="btn btn-secondary focusable" data-zone="now-playing" id="np-back-btn">&larr; Back to Browse</button>
+      </div>
+      <div class="np-container">
+        <!-- Column 1: Album Cover -->
+        <div class="np-col-cover">
+          <img class="np-cover-img" id="np-cover" src="assets/covers/default_cover.svg" alt="Album Cover" />
+        </div>
+
+        <!-- Column 2: Metadata & Controls -->
+        <div class="np-col-controls">
+          <div class="np-meta">
+            <span class="np-repo-badge" id="np-repo-badge">Showcase</span>
+            <div class="np-title" id="np-title">Track Title</div>
+            <div class="np-artist" id="np-artist">Artist Name</div>
+            <div class="np-album" id="np-album">Album Name</div>
+          </div>
+
+          <div class="np-progress-section">
+            <div class="np-progress-track focusable" data-zone="now-playing" id="np-progress-track" tabindex="0">
+              <div class="np-progress-fill" id="np-progress-fill"></div>
+            </div>
+            <div class="np-time-display">
+              <span class="np-time-cur" id="np-current-time">0:00</span>
+              <span class="np-time-total" id="np-total-time">0:00</span>
+            </div>
+          </div>
+
+          <div class="np-buttons-row">
+            <button class="np-ctrl-btn focusable" data-zone="now-playing" id="np-shuffle-btn" title="Shuffle">&#128256;</button>
+            <button class="np-ctrl-btn focusable" data-zone="now-playing" id="np-prev-btn" title="Previous">&#9198;</button>
+            <button class="np-ctrl-btn np-play-btn focusable" data-zone="now-playing" id="np-play-btn" title="Play/Pause">&#9658;</button>
+            <button class="np-ctrl-btn focusable" data-zone="now-playing" id="np-next-btn" title="Next">&#9197;</button>
+            <button class="np-ctrl-btn focusable" data-zone="now-playing" id="np-repeat-btn" title="Repeat">&#8635; Off</button>
+            <button class="np-ctrl-btn focusable" data-zone="now-playing" id="np-fav-btn" title="Favorite">&#9734;</button>
+          </div>
+        </div>
+
+        <!-- Column 3: Up Next / Queue List -->
+        <div class="np-col-queue">
+          <div class="np-queue-title">Up Next</div>
+          <div class="np-queue-list" id="np-queue-list">
+            <!-- Rendered by js/ui.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals Container -->
+    <div id="modal-container" class="modal-container" data-zone="modal"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification"></div>
+  </div>
+
+  <!-- ES5 Application Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/repository.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>

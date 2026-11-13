@@ -1,0 +1,64 @@
+{
+  "tracks": [
+    {
+      "id": "nova_track_001",
+      "title": "Midnight Starlight",
+      "artist": "Aura Synth",
+      "album": "Synth Dimensions",
+      "cover": "assets/covers/cover_midnight.svg",
+      "audio": "assets/audio/midnight_starlight.mp3",
+      "format": "mp3",
+      "duration": 21
+    },
+    {
+      "id": "nova_track_002",
+      "title": "Neon Horizon",
+      "artist": "Cyber Wave",
+      "album": "Synth Dimensions",
+      "cover": "assets/covers/cover_neon.svg",
+      "audio": "assets/audio/neon_horizon.mp3",
+      "format": "mp3",
+      "duration": 18
+    },
+    {
+      "id": "nova_track_003",
+      "title": "Golden Sunrise",
+      "artist": "Elysium Piano",
+      "album": "Nocturne Vibes",
+      "cover": "assets/covers/cover_sunrise.svg",
+      "audio": "assets/audio/golden_sunrise.mp3",
+      "format": "mp3",
+      "duration": 25
+    },
+    {
+      "id": "nova_track_004",
+      "title": "Cyber City Walk",
+      "artist": "Neo Tokyo",
+      "album": "Synth Dimensions",
+      "cover": "assets/covers/cover_cyber.svg",
+      "audio": "assets/audio/cyber_city_walk.mp3",
+      "format": "mp3",
+      "duration": 20
+    },
+    {
+      "id": "nova_track_005",
+      "title": "Solar Wind",
+      "artist": "Cosmo Drone",
+      "album": "Deep Space Ambient",
+      "cover": "assets/covers/cover_solar.svg",
+      "audio": "assets/audio/solar_wind.mp3",
+      "format": "mp3",
+      "duration": 30
+    },
+    {
+      "id": "nova_track_006",
+      "title": "Velvet Night",
+      "artist": "The Blue Room",
+      "album": "Nocturne Vibes",
+      "cover": "assets/covers/cover_velvet.svg",
+      "audio": "assets/audio/velvet_night.mp3",
+      "format": "mp3",
+      "duration": 23
+    }
+  ]
+}
